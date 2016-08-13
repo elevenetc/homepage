@@ -113,7 +113,7 @@
             var text = texts[i];
             var x = centerX - text.getWidth() / 2;
             var y = centerY - text.getHeight() / 2 + yOffset;
-            text.onDraw(context, x, y  - listOffset, i);
+            text.onDraw(context, x, y - listOffset, i);
 
             yOffset += text.getHeight() + fontSize * itemDistance;
         }
@@ -200,7 +200,7 @@
         };
 
         this.contains = function (x, y) {
-            if(link == null) return false;
+            if (link == null) return false;
             if (x >= this.x && y >= this.y && this.x + width > x && this.y + height > y) {
                 return true;
             } else {
