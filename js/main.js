@@ -1,6 +1,10 @@
 /**
  * Created by eleven on 14/08/2016.
  */
+const links = require('./links');
+const Circle = require('./circle');
+const Utils = require('./utils');
+const Text = require('./text');
 
 function init(canvasId) {
 
@@ -90,7 +94,9 @@ function init(canvasId) {
 	function initCircles() {
 		var result = [];
 		for (var i = 0; i < circlesAmount; i++)
-			result.push(new Circle(centerX, centerY, maxAlpha, getRandomColor()));
+			result.push(new Circle(centerX, centerY, maxAlpha, Utils.getRandomColor()));
 		return result;
 	}
 }
+
+init('canvas-container');

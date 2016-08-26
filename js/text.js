@@ -49,3 +49,5 @@ function Text(context, text, link, fontSize) {
 		window.open(link, "_black");
 	}
 }
+
+module.exports = Text;

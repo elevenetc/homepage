@@ -1,6 +1,9 @@
 /**
  * Created by eleven on 14/08/2016.
  */
+
+const Utils = require('./utils');
+
 function Circle(x, y, maxAlpha, color) {
 
 	this.color = color;
@@ -9,18 +12,18 @@ function Circle(x, y, maxAlpha, color) {
 	const maxScaleY = 1.1;
 	const minScaleY = 0.9;
 	const scaleYDiff = maxScaleY - minScaleY;
-	var currentScaleY = getRandom(minScaleY, maxScaleY);
+	var currentScaleY = Utils.getRandom(minScaleY, maxScaleY);
 
 	const maxScaleX = 1.1;
 	const minScaleX = 0.9;
 	const scaleXDiff = maxScaleX - minScaleX;
-	var currentScaleX = getRandom(minScaleX, maxScaleX);
+	var currentScaleX = Utils.getRandom(minScaleX, maxScaleX);
 
-	const scaleRateX = getRandom(0.001, 0.02);
-	const scaleRateY = getRandom(0.001, 0.02);
+	const scaleRateX = Utils.getRandom(0.001, 0.02);
+	const scaleRateY = Utils.getRandom(0.001, 0.02);
 
-	var xS = getRandom(1, 10);
-	var yS = getRandom(1, 10);
+	var xS = Utils.getRandom(1, 10);
+	var yS = Utils.getRandom(1, 10);
 	var alpha = 0;
 
 	this.onDraw = function (context) {
@@ -42,3 +45,5 @@ function Circle(x, y, maxAlpha, color) {
 		if (alpha < maxAlpha) alpha += 0.01;
 	}
 }
+
+module.exports = Circle;
