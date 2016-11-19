@@ -6,3 +6,5 @@
 /node_modules/
 /js/out.js
 /npm-debug.log
+/ssl/server.crt
+/ssl/server.key
