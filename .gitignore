@@ -5,3 +5,4 @@
 *.ipr
 /node_modules/
 /js/out.js
+/npm-debug.log

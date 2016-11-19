@@ -2,6 +2,8 @@ const restify = require('restify');
 const fs = require('fs');
 
 const server = restify.createServer({
+    key: fs.readFileSync('./ssl/server.key'),
+    certificate: fs.readFileSync('./ssl/server.crt'),
     name: 'elevenetc.su',
     version: '0.0.1',
     log: {
@@ -29,5 +31,9 @@ server.get('js/out.js', restify.serveStatic({
 }));
 
 server.listen(3000, function () {
+    console.log('%s listening at %s', server.name, server.url);
+});
+
+server.listen(443, function () {
     console.log('%s listening at %s', server.name, server.url);
 });
