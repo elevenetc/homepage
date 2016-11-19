@@ -1,7 +1,7 @@
 .idea
 *.iml
 .DS_Store
-/homepage.iws
-/homepage.ipr
+*.iws
+*.ipr
 /node_modules/
 /js/out.js
