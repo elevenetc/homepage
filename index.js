@@ -2,9 +2,6 @@ const restify = require('restify');
 const fs = require('fs');
 
 const server = restify.createServer({
-    key: fs.readFileSync('./ssl/server.key'),
-    certificate: fs.readFileSync('./ssl/server.crt'),
-    requestCert: true,
     name: 'elevenetc.su',
     version: '0.0.1',
     log: {
