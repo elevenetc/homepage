@@ -21,7 +21,8 @@
   "devDependencies": {
     "mocha": "^3.0.2",
     "sinon": "^1.17.5",
-    "webpack": "^4.2.0"
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13"
   },
   "dependencies": {
     "restify": "^4.3.0"
