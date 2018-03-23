@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "postinstall": "webpack ./js/main.js ./js/out.js",
+    "build": "webpack --mode production --output ./src/out.js",
+    "postinstall": "npm run build",
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node index.js"
   },
