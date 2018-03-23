@@ -24,11 +24,10 @@ server.get('/', restify.serveStatic({
     default: 'index.html'
 }));
 
-server.get('js/out.js', restify.serveStatic({
+server.get('src/out.js', restify.serveStatic({
     directory: __dirname,
 }));
 
-server.listen(3000, function () {
+server.listen(process.env.PORT || 3000, function () {
     console.log('%s listening at %s', server.name, server.url);
 });
-
