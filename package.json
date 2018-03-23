@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "postinstall": "webpack ./js/main.js ./js/out.js",
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
