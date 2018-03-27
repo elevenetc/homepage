@@ -1,7 +1,7 @@
 /**
  * Created by eugene.levenetc on 26/08/16.
  */
-const links = require('./links');
+const links = require('../src/links');
 const assert = require('assert');
 
 it('links should be valid', function () {
